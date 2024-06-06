@@ -25,6 +25,11 @@
                 <div {% if page.title == "About" %}class="text-hide"{% endif %}>
                     {{ content }}
                 </div>
+
+                {% if page.title == "About" %}
+                    <button class="show-more">Show More</button>
+                {% endif %}
+
             </article>
             
         </main>
@@ -34,6 +39,8 @@
         {% endunless %}
 
     </div>
+
+    <script src="../assets/scripts/script.js?v=123456"></script>
 
 </body>
 
