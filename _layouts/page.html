@@ -32,9 +32,7 @@
 
                 </div> -->
 
-
-
-                <!-- <div {% unless page.permalink == "/about/" %}class="text-hide" {% endunless %}>
+                <div {% unless page.permalink == "/about/" %}class="text-hide" {% endunless %}>
                     {{ content }}
 
 
@@ -42,18 +40,7 @@
                     <button class="show-more">Show More</button>
                     {% endunless %}
 
-                </div> -->
-
-                <!-- {% unless page.title == "Ways to get in touch" %} -->
-                <div {% if page.permalink == "/about/" %}class="text-hide"{% endif %}>
-                    {{ content }}
-
-                    {% if page.permalink == "/about/" %}
-                    <button class="show-more">Show More</button>
-                    {% endif %}
-
                 </div>
-                <!-- {% endunless %} -->
 
             </article>
 
