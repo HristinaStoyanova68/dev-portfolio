@@ -8,13 +8,16 @@
     /* overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis; */
+    height: 9em; /* Limit height to approximately 5 lines */
+    overflow: hidden;
     position: relative;
 }
 
 .page p.text-hide::after {
     display: block;
     content: '';
-    height: 9em;
+    /* height: 9em; */
+    height: 4em; /* Fade height */
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -25,4 +28,21 @@
       rgba(1, 22, 39, 0) 0%, rgba(1, 22, 39, 1) 90%
     )
   ;
+}
+
+.page .text-hide.show {
+  height: auto;
+}
+
+.page .text-hide.show::after {
+  display: none;
+}
+
+.show-more {
+  padding: 0.5em;
+  border-radius: 1em;
+  background-color: #369;
+  color: #fff;
+  opacity: 0.8;
+  border: none;
 }

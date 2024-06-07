@@ -22,17 +22,21 @@
                     <h1>{{page.title}}</h1>
                 </header>
 
-                <!-- <div {% if page.title=="About" %}class="text-hide" {% endif %}>
+                <div {% if page.title=="About" %}class="text-hide" {% endif %}>
                     {{ content }}
 
 
-                    {% if page.title=="About" %}
+                    <!-- {% if page.title=="About" %}
                     <button class="show-more">Show More</button>
-                    {% endif %}
+                    {% endif %} -->
 
-                </div> -->
+                    {% unless page.permalink != "/about/" %}
+                    <button class="show-more">Show More</button>
+                    {% endunless %}
 
-                <div {% unless page.permalink == "/about/" %}class="text-hide" {% endunless %}>
+                </div>
+                
+                <!-- <div {% unless page.permalink == "/about/" %}class="text-hide" {% endunless %}>
                     {{ content }}
 
 
@@ -40,8 +44,8 @@
                     <button class="show-more">Show More</button>
                     {% endunless %}
 
-                </div>
-
+                </div> -->
+                
             </article>
 
         </main>
