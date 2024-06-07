@@ -46,10 +46,14 @@
 
         </main>
 
-        {% unless page.title == "Ways to get in touch" %}
+        <!-- {% unless page.title == "Ways to get in touch" %}
+        {% include footer.html %}
+        {% endunless %} -->
+
+
+        {% unless page.permalink == "/contacts/" %}
         {% include footer.html %}
         {% endunless %}
-
     </div>
 
     <script src="../assets/scripts/script.js?v=123456"></script>
